@@ -1,7 +1,7 @@
 import random
 
 NUM_ENTRANTS = 1000000
-ODDS_MULTIPLIER = 3
+MAX_AFFINITY = 3
 
 # Converts odds in the form of n:1 to a probability from 0 to 1
 def odds_to_prob(odds):
@@ -13,7 +13,7 @@ def prob_to_odds(prob):
 
 def generate_affinities(all_characters):
     return {
-        character: ODDS_MULTIPLIER ** random.uniform(-1, 1) 
+        character: MAX_AFFINITY ** random.uniform(-1, 1) 
         for character in all_characters
     }
 
